@@ -32,7 +32,10 @@ cd /tmp
 wget http://nodejs.org/dist/v${NODE_VERSION}/${NODE_DIST}.tar.gz
 tar xvzf ${NODE_DIST}.tar.gz
 sudo rm -rf /opt/nodejs
-sudo mkdir -p /opt/nodejs
+
+#sometimes /opt doesn't exist by default
+sudo mkdir -p /opt/
+
 sudo mv ${NODE_DIST} /opt/nodejs
 
 sudo ln -sf /opt/nodejs/bin/node /usr/bin/node
