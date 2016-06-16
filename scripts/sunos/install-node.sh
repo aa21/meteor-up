@@ -22,6 +22,7 @@ cd /tmp
 wget http://nodejs.org/dist/v${NODE_VERSION}/${NODE_DIST}.tar.gz
 tar xvzf ${NODE_DIST}.tar.gz
 sudo rm -rf /opt/nodejs
+sudo mkdir -p /opt/nodejs
 sudo mv ${NODE_DIST} /opt/nodejs
 
 # set downloaded node version as the default
